@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class ActivityOne extends AppCompatActivity {
 
@@ -92,5 +95,76 @@ public class ActivityOne extends AppCompatActivity {
         super.onDestroy();
         System.out.println("ActivityOne - onDestroy");
         Log.i("ActivityOne","onDestroy");
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        // Explicit Menu Creation
+
+        // group id, item id, sequence, name
+        /*menu.add(1,101,0,"All Songs");
+        menu.add(1,201,0,"Artists");
+        menu.add(1,301,0,"Recently Played");
+
+        menu.add(2,401,0,"Images");
+        menu.add(2,501,0,"Videos");
+        menu.add(2,601,0,"Audios");*/
+
+        // Implicit Menu Creation
+        getMenuInflater().inflate(R.menu.menu_activityone,menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        int gid = item.getGroupId();
+
+        Toast.makeText(this,"Group Id "+gid+" Item Id "+id,Toast.LENGTH_LONG).show();
+
+        /*switch (id){
+            case 101:
+                    Intent intent = new Intent(ActivityOne.this,AllSongsActivity.class);
+                    startActivity(intent);
+                break;
+
+            case 201:
+
+                break;
+
+            case 401:
+
+                break;
+
+            case 501:
+
+                break;
+
+            //...
+        }*/
+
+        switch (id){
+            case R.id.allSongs:
+                Intent intent = new Intent(ActivityOne.this,AllSongsActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.amazon:
+                Intent intent1 = new Intent(ActivityOne.this,AmazonActivity.class);
+                startActivity(intent1);
+                break;
+
+            case R.id.favourites:
+
+                break;
+
+            //....
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
