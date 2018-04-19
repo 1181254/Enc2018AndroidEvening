@@ -22,6 +22,7 @@
 
     <TableRow>
         <Button android:text="Button6"
+            android:id="@+id/button6"
             android:layout_span="2"/>
 
     </TableRow>

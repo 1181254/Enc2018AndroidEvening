@@ -18,15 +18,18 @@
         <activity android:name=".AllSongsActivity" />
         <activity android:name=".AmazonActivity" />
         <activity android:name=".ViewsActivity" />
-        <activity android:name=".MyLocationActivity"></activity>
+        <activity android:name=".MyLocationActivity" />
         <activity android:name=".NewsActivity">
+
+        </activity>
+        <activity android:name=".NewsDisplayActivity" />
+        <activity android:name=".MyDialogActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewsDisplayActivity"></activity>
     </application>
 
 </manifest>
