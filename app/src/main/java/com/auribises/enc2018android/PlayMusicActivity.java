@@ -1,6 +1,8 @@
 package com.auribises.enc2018android;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +16,15 @@ public class PlayMusicActivity extends AppCompatActivity implements View.OnClick
 
     String songName;
 
+    MediaPlayer mediaPlayer;
+
+    String path;
+
     void initViews(){
+
+        mediaPlayer = new MediaPlayer();
+
+
         txtSongName = findViewById(R.id.textViewSongName);
         btnPlay = findViewById(R.id.buttonPlay);
         btnStop = findViewById(R.id.buttonStop);
@@ -26,6 +36,8 @@ public class PlayMusicActivity extends AppCompatActivity implements View.OnClick
         songName = rcv.getStringExtra("keySongName");
 
         txtSongName.setText(songName);
+
+        path = "/storage/16F7-330D";
     }
 
     @Override
@@ -39,7 +51,21 @@ public class PlayMusicActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View view) {
         if(view.getId() == R.id.buttonPlay){
 
+            try{
+
+                //mediaPlayer.setDataSource(path+"/"+songName);
+                mediaPlayer.setDataSource(this, Uri.parse("http://www.auribises.com/Jugni.mp3"));
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
         }else{
+
+            mediaPlayer.stop();
+            mediaPlayer.release();
 
         }
     }
