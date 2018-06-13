@@ -20,9 +20,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ActivityOne" />
         <activity android:name=".ActivityTwo" />
-        <activity android:name=".AllSongsActivity">
-
-        </activity>
+        <activity android:name=".AllSongsActivity"></activity>
         <activity android:name=".AmazonActivity" />
         <activity android:name=".ViewsActivity" />
         <activity android:name=".MyLocationActivity" />
@@ -33,6 +31,9 @@
         <activity android:name=".PlayMusicActivity" />
         <activity android:name=".VoiceRecognitionActivity" />
         <activity android:name=".RecyclerViewActivity">
+
+        </activity>
+        <activity android:name=".MyFragmentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
