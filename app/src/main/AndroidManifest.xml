@@ -20,7 +20,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ActivityOne" />
         <activity android:name=".ActivityTwo" />
-        <activity android:name=".AllSongsActivity"></activity>
+        <activity android:name=".AllSongsActivity" />
         <activity android:name=".AmazonActivity" />
         <activity android:name=".ViewsActivity" />
         <activity android:name=".MyLocationActivity" />
@@ -30,10 +30,22 @@
         <activity android:name=".MySensorActivity" />
         <activity android:name=".PlayMusicActivity" />
         <activity android:name=".VoiceRecognitionActivity" />
-        <activity android:name=".RecyclerViewActivity">
+        <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".MyFragmentActivity" />
+        <activity
+            android:name=".MyNavigationActivity"
+            android:label="@string/title_activity_my_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyBottomNavActivity"
+            android:label="@string/title_activity_my_bottom_nav"></activity>
+        <activity
+            android:name=".MyTabsActivity"
+            android:label="@string/title_activity_my_tabs"
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
-        <activity android:name=".MyFragmentActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
