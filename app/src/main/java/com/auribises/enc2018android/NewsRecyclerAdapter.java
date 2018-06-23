@@ -50,6 +50,7 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
         return objects.size();
     }
 
+    // Nested Class | Which represents list item
     class ViewHolder extends RecyclerView.ViewHolder{
 
         ImageView iv;
